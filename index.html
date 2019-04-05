@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fourth Aplication - Tareas</title>
+    <title>My Tasks</title>
     <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
     <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="app">
+    <nav class="color blue">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">My Tasks</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#"><i class="material-icons left">person_add</i> REGISTRATE</a></li>
+                    <li><a href="#"><i class="material-icons left">lock_open</i> INICIA SESIÓN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#"><i class="material-icons left">person_add</i> REGISTRATE</a></li>
+    <li><a href="#"><i class="material-icons left">lock_open</i> INICIA SESIÓN</a></li>               
+  </ul>
+
+    <main class="" id="app">
         <div class="container">
             <el-titulo></el-titulo>
             <div class="row">
@@ -30,15 +48,20 @@
                             </span>
                         </li>
                     </ul>
-                    <pre>
+                    <!-- <pre>
                         {{$data}}
-                    </pre>
+                    </pre> -->
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/vue.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/edicion.js"></script>
 </body>
 </html>

@@ -3,3 +3,7 @@
     background-color: #0097a7;
     text-decoration-line: line-through;
 }
+body{
+    /*background: linear-gradient(#2196F3,#5cbbf6);
+    */height: 100vh;
+}

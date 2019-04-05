@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fourth Aplication - Tareas</title>
+    <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <el-titulo></el-titulo>
+            <div class="row">
+                <div class="col s12 l12">
+                    <div class="input-field col s12 l12">
+                        <input v-model="entrada" v-on:keyup.enter="agregarTarea()" placeholder="Ingrese la tarea" type="text">
+                        <button v-on:click="agregarTarea()" class="btn right">Agregar</button>
+                    </div>
+                </div>
+                <div class="col s12 responsive-table">
+                    <ul class="collection">
+                        <li v-for="(t, index) in filtroAntiguedad" v-bind:class=" {'realizada': t.actividad}" class="collection-item">{{t.nombre}}
+                            <span class="right">
+                                <button  v-on:click="t.actividad = !t.actividad" class="btn-floating waves-effect waves-light green btn-small"><i class="material-icons">done</i></button>
+                                <button  v-on:click="borrarTarea(index)" class="btn-floating waves-effect waves-light red btn-small"><i class="material-icons">close</i></button>
+                            </span>
+                        </li>
+                    </ul>
+                    <pre>
+                        {{$data}}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
